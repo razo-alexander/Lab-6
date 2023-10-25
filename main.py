@@ -13,11 +13,19 @@ def encoder(user_password):
     return password
 
 
+# decoder done by Zachary Wright
+def decode(pass_in):
+    final_pass = ''
+    for char in pass_in:
+        final_pass += str(int(char) - 3)[-1]
+    return final_pass
+
+
 def main():
     encoded_pass = ''
     user_password = ''
     while True:
-        print(menu())
+        menu()
         user_input = input('Please enter an option: ')
         if user_input == '1':
             user_password = input('Please enter your password to encode: ')
@@ -28,4 +36,5 @@ def main():
         elif user_input == '3':
             break
 
-main()
+if __name__ == '__main__':
+    main()
