@@ -1,3 +1,4 @@
+# Code prints the menu when called
 def menu():
     print('Menu')
     print('-------------')
@@ -5,7 +6,7 @@ def menu():
     print('2. Decoder')
     print('3. Quit')
 
-
+# This code is for the encoding of the password
 def encoder(user_password):
     password = ''
     for char in user_password:
@@ -20,7 +21,7 @@ def decode(pass_in):
         final_pass += str(int(char) - 3)[-1]
     return final_pass
 
-
+# This is the while of the code that contains the code for the user options
 def main():
     encoded_pass = ''
     user_password = ''
